@@ -28,7 +28,7 @@ public class CreateCourierTest {
                 .header("Content-type", "application/json")
                 .body(create)
                 .when()
-                .post("/api/v1/courier")
+                .post("/api/auth/register")
                 .then().assertThat()
                 .statusCode(201)
                 .body("ok", is(true));
